@@ -1,0 +1,91 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #34495E;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #2980B9;
+    color: #ECF0F1;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #3498DB;
+}
+
+/* Tooltip styl - nyní v levém horním rohu */
+.tooltip {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #ECF0F1;
+}
+
+.tooltip-text {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.riddle {
+    display: none;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ECF0F1;
+    background-color: #2980B9;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+}
+
+/* Zobrazení hádanky po najetí myší s časovým zpožděním */
+.tooltip:hover .riddle {
+    display: block;
+    animation: fadeIn 1s ease;
+}
+
+/* Efekt zpožděného zobrazení */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #34495E;
+    color: #ECF0F1;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
